@@ -13,6 +13,7 @@ public class Record {
 
     Long id;
     int age;
+    int gender;
 
     public Long getId () {
         return id;
@@ -28,5 +29,13 @@ public class Record {
 
     public void setAge (int age) {
         this.age = age;
+    }
+
+    public void setGender(int gender) {
+        this.gender = gender;
+    }
+
+    public int getGender() {
+        return this.gender;
     }
 }
