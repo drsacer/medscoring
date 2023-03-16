@@ -1,30 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>Upitnik za procjenu rizika</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="icon" type="image/x-icon" sizes="16x16" href="logo.png">
-
-    <title>Upitnik za procjenu rizika od moždanog udara</title>
 </head>
 
 <body>
-<header>
-    <h1>Upitnik za procjenu rizika</h1>
-</header>
-<main>
-    <form>
-        <h2>Odaberite spol</h2>
-        <label><input type="radio" name="gender" value="male"> Muško</label>
-        <label><input type="radio" name="gender" value="female"> Žensko</label>
 
-        <button type="submit">Sljedeće</button>
-    </form>
-</main>
+<input>
+    <header>
+        <h1>Upitnik za procjenu rizika</h1>
+    </header>
+    <main>
+        <form>
+            <h2>Question 1: What is your gender?</h2>
+            <label><input type="radio" name="gender" value="male"> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+            <button type="submit" formaction="age.html">Next</button>
+
+            <input type="hidden" name="recordId" th:value="${newRecord.id}">
+        </form>
+    </main>
 </body>
 
 </html>

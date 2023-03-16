@@ -17,9 +17,20 @@ public class SurveyController {
     public String init (Model model) {
         Record newRecord = new Record ();
         recordRepository.save (newRecord);
-        model.addAttribute (newRecord.getId ());
+        model.addAttribute("newRecord", newRecord);
 
         return "survey2page1.html";
+
+    }
+
+    @GetMapping("/page1submit")
+    public String page1submit (Model model, long recordId, String gender) {
+        Record record = recordRepository.findById(record);
+        record.setGender(gender.equals("male") ? 1 : 2);
+
+        model.addAttribute("record", record);
+
+        return "survey2page2.html"
 
     }
 }
