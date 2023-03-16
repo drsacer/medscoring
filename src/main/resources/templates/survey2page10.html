@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="logo.png">
+
+    <title>Upitnik za procjenu rizika od moždanog udara</title>
+</head>
+
+<body>
+    <header>
+        <h1>Upitnik za procjenu rizika od moždanog udara</h1>
+    </header>
+    <main>
+
+        <h2>Pitanja za utvrđivanje obiteljske anamneze</h2>
+
+        <form>
+            <h2>Cerebrovaskularne bolesti - CV - odaberite da li netko u Vašoj obitelji ima cerebrovaskularne bolesti
+            </h2>
+            <label><input type="radio" name="CV" value="noCV"> Nema CV bolesti</label>
+            <label><input type="radio" name="CV" value="onerelative"> 1 rođak sa CV bolesti</label>
+            <label><input type="radio" name="CV" value="tworelatives"> 2 rođaka sa CV bolesti</label>
+            <label><input type="radio" name="CV" value="threerelativeslessthansixty"> 3 rođaka sa CV bolesti koji su
+                stariji od 60 godina</label>
+            <label><input type="radio" name="CV" value="threerelativesmorethansixty"> 3 rođaka koji su mlađi od 60
+                godina</label>
+
+            <h2>Šećerna bolest - odaberite da li Vi ili netko u Vašoj obitelji ima šećernu bolest</h2>
+            <label><input type="radio" name="diabetes" value="none"> Nemam</label>
+            <label><input type="radio" name="diabetes" value="onerelative"> 1 rođak (drugo koljeno)</label>
+            <label><input type="radio" name="diabetes" value="tworelatives"> 2 rođaka(drugo koljeno)</label>
+            <label><input type="radio" name="diabetes" value="yesaftertwenty"> Javila mi se šećerna bolest nakon 20.
+                godine</label>
+            <label><input type="radio" name="diabetes" value="yesbeforesixty"> Javila mi se šećerna bolest prije 60.
+                godine</label>
+
+            <h2>Fibrilacija atrija - odaberite odgovor koji se odnosi na Vas</h2>
+            <label><input type="radio" name="heart" value="normal"> Pravilan rad srca</label>
+            <label><input type="radio" name="heart" value="sometimes"> Povremeno lupanje srca</label>
+            <label><input type="radio" name="heart" value="yesbutonmeds"> Da, ali koristim lijekove</label>
+            <label><input type="radio" name="heart" value="allthetime"> Stalno</label>
+
+            <h2>Povišen krvni tlak- odaberite da li netko u Vašoj obitelji ima povišen krvni tlak</h2>
+            <label><input type="radio" name="bloodpressure" value="no"> Ne</label>
+            <label><input type="radio" name="bloodpressure" value="onerelative"> 1 rođak (drugo koljeno)</label>
+            <label><input type="radio" name="bloodpressure" value="tworelatives"> 2 rođaka (drugo koljeno)</label>
+            <label><input type="radio" name="bloodpressure" value="motherorfather"> Majka ili otac</label>
+            <label><input type="radio" name="bloodpressure" value="motherandfather"> Majka i otac</label>
+
+            <h2>Moždani udar - odaberite da li je netko u Vašoj obitelji imao moždani udar</h2>
+            <label><input type="radio" name="stroke" value="no"> Ne</label>
+            <label><input type="radio" name="stroke" value="onerelative"> 1 rođak (drugo koljeno)</label>
+            <label><input type="radio" name="stroke" value="tworelatives"> 2 rođaka (drugo koljeno)</label>
+            <label><input type="radio" name="stroke" value="motherorfather"> Majka ili otac</label>
+            <label><input type="radio" name="stroke" value="motherandfather"> Majka i otac</label>
+
+            <button type="submit">Sljedeće</button>
+        </form>
+    </main>
+</body>
+
+</html>

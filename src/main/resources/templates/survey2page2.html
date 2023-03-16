@@ -1,26 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Upitnik za procjenu rizika</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="logo.png">
+
+    <title>Upitnik za procjenu rizika od moždanog udara</title>
 </head>
 
 <body>
-    <header>
-        <h1>Upitnik za procjenu rizika</h1>
-    </header>
-    <main>
-        <form>
-            <h2>Question 2: What is your age?</h2>
-            <input type="number" name="age">
-            <h2>Question 3: What is your BMI index?</h2>
-            <label><input type="radio" name="bmi" value="underweight"> Underweight</label>
-            <label><input type="radio" name="bmi" value="normal"> Normal</label>
-            <label><input type="radio" name="bmi" value="overweight"> Overweight</label>
-            <button type="submit" formaction="smoking.html">Next</button>
-        </form>
-    </main>
+<header>
+    <h1>Upitnik za procjenu rizika</h1>
+</header>
+<main>
+    <form>
+        <h2>Koja je Vaša dob?</h2>
+        <label><input type="radio" name="age" value="lessthantwenty"> do 20 godina</label>
+        <label><input type="radio" name="age" value="21to30"> 21-30 godina</label>
+        <label><input type="radio" name="age" value="31to45"> 31-45 godina</label>
+        <label><input type="radio" name="age" value="46to59"> 46-59 godina</label>
+        <label><input type="radio" name="age" value="morethan60"> više od 60 godina</label>
+
+        <button type="submit">Sljedeće</button>
+    </form>
+</main>
 </body>
 
 </html>

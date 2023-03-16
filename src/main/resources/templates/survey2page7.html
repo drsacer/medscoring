@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="logo.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
+
+    <script src="script.js"></script>
+
+
+    <title>Upitnik za procjenu rizika od moždanog udara</title>
+</head>
+
+<body>
+    <header>
+        <h1>Upitnik za procjenu rizika od moždanog udara</h1>
+    </header>
+    <main>
+        <form>
+            <h2>Koliki Vam je BMI indeks tjelesne mase?</h2>
+
+
+            <center>
+                <div <h2 style="text-align: center;">BMI kalkulator</h2>
+                    <form>
+                        <p class="inputs">
+                            <label>Visina (CM): </label>
+                            <input type="number" id="height" min="1">
+                        </p>
+                        <p class="inputs">
+                            <label>Težina (KG): </label>
+                            <input type="number" id="weight" min="1">
+                        </p>
+                        <button class="calcBtn">Izračunaj</button>
+                        <div style="margin-top: 20px;">Vaš BMI indeks: <p id="results"></p>
+                        </div>
+                        <p id="message"></p>
+                    </form>
+                </div>
+            </center>
+
+            <label><input type="radio" name="bmi" value="underweight"> do 19.0 kg/m2 (pothranjenost)</label>
+            <label><input type="radio" name="bmi" value="ideal"> 19-25 kg/m2 (normalno)</label>
+            <label><input type="radio" name="bmi" value="slightlyhigh"> 25-30 kg/m2 (blago povišeno)</label>
+            <label><input type="radio" name="bmi" value="overweight"> 30-35 kg/m2 (višak kilograma)</label>
+            <label><input type="radio" name="bmi" value="obese"> veće od 35 kg/m2 (pretilost)</label>
+
+            <button type="submit">Sljedeće</button>
+        </form>
+    </main>
+</body>
+
+</html>

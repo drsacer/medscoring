@@ -1,32 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Upitnik za procjenu rizika</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="logo.png">
+
+    <title>Upitnik za procjenu rizika od moždanog udara</title>
 </head>
 
 <body>
-    <header>
-        <h1>Upitnik za procjenu rizika</h1>
-    </header>
-    <main>
-        <form>
-            <h2>Question 4: Do you smoke?</h2>
+<header>
+    <h1>Upitnik za procjenu rizika</h1>
+</header>
+<main>
+    <form>
+        <h2>Jeste li pušač?</h2>
+        <label><input type="radio" name="smoking" value="yes"> Da</label>
+        <label><input type="radio" name="smoking" value="ex"> Bivši</label>
+        <label><input type="radio" name="smoking" value="sometimes"> Povremeni</label>
+        <label><input type="radio" name="smoking" value="no"> Ne</label>
 
-            <label><input type="radio" name="smoking" value="yes"> Yes</label>
-            <label><input type="radio" name="smoking" value="no"> No</label>
-
-            <h2>Question 5: How many cigarettes do you smoke per day?</h2>
-            <label><input type="radio" name="cigarettes" value="none"> None</label>
-            <label><input type="radio" name="cigarettes" value="1-5"> 1-5</label>
-            <label><input type="radio" name="cigarettes" value="6-10"> 6-10</label>
-            <label><input type="radio" name="cigarettes" value="11-20"> 11-20</label>
-            <label><input type="radio" name="cigarettes" value="21+"> 21+</label>
-
-            <button type="submit" formaction="#">Submit</button>
-        </form>
-    </main>
+        <button type="submit">Sljedeće</button>
+    </form>
+</main>
 </body>
 
 </html>

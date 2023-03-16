@@ -1,6 +1,7 @@
-/* Global styles */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Playfair', sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
@@ -10,7 +11,7 @@ body {
 }
 
 header {
-    background-color: #7c5d87;
+    background-color: #ED1C24;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -18,6 +19,10 @@ header {
 
 h1 {
     margin: 0;
+}
+
+h2 {
+    text-align: center;
 }
 
 main {
@@ -40,7 +45,6 @@ label {
 }
 
 input[type="text"],
-input[type="email"],
 select {
     width: 100%;
     padding: 10px;
@@ -57,82 +61,16 @@ select {
 button {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #7c5d87;
+    background-color: #ED1C24;
     color: #fff;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #9c7faa;
+    background-color: #9f2226;
 }
 
-/* Page-specific styles */
-/* Page 1 */
-form#gender-question {
-    margin-top: 50px;
-    text-align: center;
-}
 
-form#gender-question h2 {
-    font-size: 24px;
-    font-weight: normal;
-}
-
-form#gender-question label {
-    display: inline-block;
-    margin: 10px;
-    font-size: 20px;
-}
-
-/* Page 2 */
-form#age-bmi-question h2:first-of-type {
-    margin-top: 0;
-}
-
-form#age-bmi-question h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    font-weight: normal;
-}
-
-form#age-bmi-question label {
-    display: block;
-    margin: 10px 0;
-    font-size: 20px;
-}
-
-form#age-bmi-question input[type="text"] {
-    width: calc(50% - 5px);
-    margin-left: 10px;
-}
-
-@media screen and (max-width: 768px) {
-    form#age-bmi-question input[type="text"] {
-        width: 100%;
-        margin-left: 0;
-    }
-}
-
-/* Page 3 */
-form#smoking-question h2:first-of-type {
-    margin-top: 0;
-}
-
-form#smoking-question h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    font-weight: normal;
-}
-
-form#smoking-question label {
-    display: block;
-    margin: 10px 0;
-    font-size: 20px;
-}
-
-form#smoking-question button {
-    margin-top: auto;
-}
