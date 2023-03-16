@@ -13,7 +13,7 @@ public class SurveyController {
     @Autowired
     RecordRepository recordRepository;
 
-    @GetMapping("/init")
+  /*  @GetMapping("/init")
     public String init (Model model) {
         Record newRecord = new Record ();
         recordRepository.save (newRecord);
@@ -30,7 +30,7 @@ public class SurveyController {
 
         model.addAttribute("record", record);
 
-        return "survey2page2.html"
+        return "survey2page2.html";
 
-    }
+    } */
 }
