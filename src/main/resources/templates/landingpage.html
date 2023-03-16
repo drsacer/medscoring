@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <title>Upitnik za procjenu rizika</title>
@@ -27,11 +27,14 @@
             kolesterol</h3>
         <h3> Ukoliko nemate navedene rezultate, bit će ponuđena opcija Ne znam. Odabirom te opcije, smanjuje se
             točnost rezultata. </h3>
-
     </center>
 
-    <center>
+    <form action="/showpage1">
+        <input type="hidden" name="recordId" th:value="${record.id}">
         <button type="submit">Započni anketu</button>
+    </form>
+    <center>
+
     </center>
 
 </main>
