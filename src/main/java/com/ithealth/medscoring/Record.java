@@ -8,23 +8,64 @@ import jakarta.persistence.Id;
 @Entity
 
 public class Record {
-
     @Id
     @GeneratedValue
 
     Long id;
-
     @Column(name = "SPOL")
     String gender;
-
-    public String getGender () {
-        return gender;
-    }
-
-    public void setGender (String gender) {
-        this.gender = gender;
-    }
-
+    @Column(name = "DOB")
+    String age;
+    @Column(name = "PUŠAČ")
+    String smoking;
+    @Column(name = "PUŠAČ - DNEVNO CIGARETA")
+    String dailycigarettessmoker;
+    @Column(name = "PUŠAČ - KOLIKO DUGO")
+    String smokingduration;
+    @Column(name = "POVREMENI PUŠAČ - KOLIČINA")
+    String weeklycigarettes;
+    @Column(name = "BIVŠI PUŠAČ - VRIJEME")
+    String stoppedsmoking;
+    @Column(name = "BIVŠI PUŠAČ - KOLIČINA")
+    String dailycigarettesquit;
+    @Column(name = "BMI")
+    String bmi;
+    @Column(name = "ALKOHOL")
+    String alcohol;
+    @Column(name = "TJELESNA AKTIVNOST")
+    String activity;
+    @Column(name = "ANAMNEZA - CV")
+    String CV;
+    @Column(name = "ANAMNEZA - ŠEĆER")
+    String diabetes;
+    @Column(name = "ANAMNEZA - FIBRILACIJA ATRIJA")
+    String heart;
+    @Column(name = "ANAMNEZA - KRVNI TLAK")
+    String bloodpressure;
+    @Column(name = "ANAMNEZA - MOŽDANI")
+    String stroke;
+    @Column(name = "UKUPNI KOLESTEROL")
+    String cholesterol;
+    @Column(name = "LDL")
+    String LDL;
+    @Column(name = "SISTOLIČKI")
+    String systolic;
+    @Column(name = "DIJASTOLIČKI")
+    String diastolic;
+    @Column(name = "OTKUCAJI")
+    String heartbeat;
+    @Column(name = "KRONIČNE BOLESTI")
+    String chronic;
+    @Column(name = "LIJEKOVI ZGRUŠNJAVANJE")
+    String medication;
+    @Column(name = "MIGRENA")
+    String migraine;
+    @Column(name = "HORMONSKA TERAPIJA")
+    String hormonaltherapy;
+    @Column(name = "EKLAMPSIJA")
+    String eclampsia;
+    @Column(name = "TRUDNOĆA")
+    String pregnant;
     public Long getId () {
         return id;
     }
@@ -32,50 +73,6 @@ public class Record {
     public void setId (Long id) {
         this.id = id;
     }
-
-/*    String age;
-
-    String smoking;
-
-    String dailycigarettessmoker;
-
-    String smokingduration;
-
-    String weeklycigarettes;
-
-    String stoppedsmoking;
-
-    String dailycigarettesquit;
-
-    String bmi;
-
-    String alcohol;
-
-    String activity;
-
-    String CV;
-
-    String diabetes;
-
-    String heart;
-
-    String bloodpressure;
-
-    String stroke;
-
-    String cholesterol;
-    String LDL;
-    String systolic;
-    String diastolic;
-    String heartbeat;
-    String chronic;
-    String medication;
-    String migraine;
-    String hormonaltherapy;
-    String eclampsia;
-    String pregnant;
-
-
 
     public String getGender () {
         return gender;
@@ -117,6 +114,7 @@ public class Record {
         this.smokingduration = smokingduration;
     }
 
+
     public String getWeeklycigarettes () {
         return weeklycigarettes;
     }
@@ -148,7 +146,6 @@ public class Record {
     public void setBmi (String bmi) {
         this.bmi = bmi;
     }
-
     public String getAlcohol () {
         return alcohol;
     }
@@ -260,7 +257,6 @@ public class Record {
     public void setMedication (String medication) {
         this.medication = medication;
     }
-
     public String getMigraine () {
         return migraine;
     }
@@ -291,5 +287,5 @@ public class Record {
 
     public void setPregnant (String pregnant) {
         this.pregnant = pregnant;
-    } */
+    }
 }

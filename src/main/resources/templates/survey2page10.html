@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8">
@@ -20,15 +20,15 @@
 
     <h2>Pitanja za utvrđivanje obiteljske anamneze</h2>
 
-    <form>
+    <form action="/page10submit">
         <h2>Da li netko u Vašoj obitelji ima cerebrovaskularne bolesti (CV)?
         </h2>
         <label><input type="radio" name="CV" value="noCV"> Nema CV bolesti</label>
         <label><input type="radio" name="CV" value="onerelative"> 1 rođak sa CV bolesti</label>
         <label><input type="radio" name="CV" value="tworelatives"> 2 rođaka sa CV bolesti</label>
-        <label><input type="radio" name="CV" value="threerelativeslessthansixty"> 3 rođaka sa CV bolesti koji su
+        <label><input type="radio" name="CV" value="threerelativesmorethansixty"> 3 rođaka sa CV bolesti koji su
             stariji od 60 godina</label>
-        <label><input type="radio" name="CV" value="threerelativesmorethansixty"> 3 rođaka koji su mlađi od 60
+        <label><input type="radio" name="CV" value="threerelativeslessthansixty"> 3 rođaka koji su mlađi od 60
             godina</label>
 
         <h2>Da li Vi ili netko u Vašoj obitelji ima šećernu bolest?</h2>
@@ -59,6 +59,8 @@
         <label><input type="radio" name="stroke" value="tworelatives"> 2 rođaka (drugo koljeno)</label>
         <label><input type="radio" name="stroke" value="motherorfather"> Majka ili otac</label>
         <label><input type="radio" name="stroke" value="motherandfather"> Majka i otac</label>
+
+        <input type="hidden" name="recordId" th:value="${record.id}">
 
         <button type="submit">Sljedeće</button>
     </form>

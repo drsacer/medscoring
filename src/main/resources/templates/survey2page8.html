@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8">
@@ -17,13 +17,15 @@
         <h1>Upitnik za procjenu rizika od moždanog udara</h1>
     </header>
     <main>
-        <form>
+        <form action="/page8submit">
             <h2>Koliko često pijete alkohol?</h2>
             <label><input type="radio" name="alcohol" value="doesntdrink"> Ne pijem</label>
             <label><input type="radio" name="alcohol" value="onedl"> 1dl dnevno</label>
             <label><input type="radio" name="alcohol" value="twotothreedl"> 2-3dl dnevno</label>
             <label><input type="radio" name="alcohol" value="fivedl"> 5dl dnevno</label>
             <label><input type="radio" name="alcohol" value="morethanonel"> više od 1L dnevno</label>
+
+            <input type="hidden" name="recordId" th:value="${record.id}">
 
             <button type="submit">Sljedeće</button>
         </form>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8">
@@ -17,13 +17,15 @@
         <h1>Upitnik za procjenu rizika od moždanog udara</h1>
     </header>
     <main>
-        <form>
+        <form action="/page9submit">
             <h2>Kakva je Vaša tjelesna aktivnost?</h2>
             <label><input type="radio" name="activity" value="active"> 3-4- tjedno 30 -40 min, fizički posao</label>
             <label><input type="radio" name="activity" value="moderatelyactive"> 2-3 puta tjedno, fizički posao</label>
             <label><input type="radio" name="activity" value="lessactive"> 2-3-puta tjedno, sjedeći posao</label>
             <label><input type="radio" name="activity" value="notveryactive"> Jednom mjesečno, sjedeći posao</label>
             <label><input type="radio" name="activity" value="notactive"> Ne krećem se, sjedeći posao</label>
+
+            <input type="hidden" name="recordId" th:value="${record.id}">
 
             <button type="submit">Sljedeće</button>
         </form>

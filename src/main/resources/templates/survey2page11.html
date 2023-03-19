@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8">
@@ -17,20 +17,22 @@
         <h1>Upitnik za procjenu rizika od moždanog udara</h1>
     </header>
     <main>
-        <form>
+        <form action="/page11submit">
             <h2>Kolika Vam je razina ukupnog kolesterola(mmol/L)?</h2>
             <label><input type="radio" name="cholesterol " value="dontknow"> Neznam</label>
-            <label><input type="radio" name="cholesterol" value="lessthan5"> manje od 5 mmol/L</label>
-            <label><input type="radio" name="cholesterol" value="lessthan6"> manje od 6 mmol/L</label>
-            <label><input type="radio" name="cholesterol" value="lessthan8"> manje od 8 mmol/L</label>
-            <label><input type="radio" name="cholesterol" value="lessthan9"> manje od 9 mmol/L</label>
+            <label><input type="radio" name="cholesterol" value="lessthanfive"> manje od 5 mmol/L</label>
+            <label><input type="radio" name="cholesterol" value="lessthansix"> manje od 6 mmol/L</label>
+            <label><input type="radio" name="cholesterol" value="lessthaneight"> manje od 8 mmol/L</label>
+            <label><input type="radio" name="cholesterol" value="lessthannine"> manje od 9 mmol/L</label>
 
-            <h2>Kolika Vam je razin LDL kolesterola (mmol/L)?</h2>
-            <label><input type="radio" name="LDL" value="lessthanfive"> Neznam</label>
-            <label><input type="radio" name="LDL" value="fivetoten"> manje od 3 mmol/L</label>
-            <label><input type="radio" name="LDL" value="tentotwenty"> manje od 4 mmol/L</label>
-            <label><input type="radio" name="LDL" value="twentytothirty"> manje od 5 mmol/L</label>
-            <label><input type="radio" name="LDL" value="morethanthirty"> manje od 6 mmol/L</label>
+            <h2>Kolika Vam je razina LDL kolesterola (mmol/L)?</h2>
+            <label><input type="radio" name="LDL" value="dontknow"> Neznam</label>
+            <label><input type="radio" name="LDL" value="lessthanthree"> manje od 3 mmol/L</label>
+            <label><input type="radio" name="LDL" value="lessthanfour"> manje od 4 mmol/L</label>
+            <label><input type="radio" name="LDL" value="lessthanfive"> manje od 5 mmol/L</label>
+            <label><input type="radio" name="LDL" value="lessthansix"> manje od 6 mmol/L</label>
+
+            <input type="hidden" name="recordId" th:value="${record.id}">
 
             <button type="submit">Sljedeće</button>
         </form>

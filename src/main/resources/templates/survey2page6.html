@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@
         <h1>Upitnik za procjenu rizika od moždanog udara</h1>
     </header>
     <main>
-        <form>
+        <form action="/page6submit">
             <h2>Kada ste prestali pušiti?</h2>
             <label><input type="radio" name="stoppedsmoking" value="thirtyyearsago"> prije 30 godina</label>
             <label><input type="radio" name="stoppedsmoking" value="twentyyearsago"> prije 20 godina</label>
@@ -31,6 +31,8 @@
             <label><input type="radio" name="dailycigarettesquit" value="tentotwenty"> 10-20 cigareta</label>
             <label><input type="radio" name="dailycigarettesquit" value="twentytothirty"> 20-30 cigareta</label>
             <label><input type="radio" name="dailycigarettesquit" value="morethanthirty"> više od 30 cigareta</label>
+
+            <input type="hidden" name="recordId" th:value="${record.id}">
 
             <button type="submit">Sljedeće</button>
         </form>

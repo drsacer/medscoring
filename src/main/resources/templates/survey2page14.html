@@ -38,7 +38,7 @@
                 godina</label>
 
             <h2>Da li je netko u Vašoj obitelji bolovao od eklampsije?</h2>
-            <label><input type="radio" name="eclampsia" value="no"> Nema</label>
+            <label><input type="radio" name="eclampsia" value="no"> Ne</label>
             <label><input type="radio" name="eclampsia" value="onecousin"> 1 sestrična</label>
             <label><input type="radio" name="eclampsia" value="twocousins"> 2 sestrične</label>
             <label><input type="radio" name="eclampsia" value="mother"> Majka</label>
@@ -47,6 +47,8 @@
             <h2>Jeste li trudni?</h2>
             <label><input type="radio" name="pregnant" value="yes"> Da</label>
             <label><input type="radio" name="pregnant" value="no"> Ne</label>
+
+            <input type="hidden" name="recordId" th:value="${record.id}">
 
             <button type="submit">Sljedeće</button>
         </form>

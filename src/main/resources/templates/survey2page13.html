@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@
         <h1>Upitnik za procjenu rizika od moždanog udara</h1>
     </header>
     <main>
-        <form>
+        <form action="/page13submit">
             <h2>Da li liječite svoju kroničnu bolest?</h2>
             <label><input type="radio" name="chronic" value="none"> Nemam kroničnih bolesti</label>
             <label><input type="radio" name="chronic" value="yes"> Da</label>
@@ -27,7 +27,9 @@
             <label><input type="radio" name="medication" value="yes"> Da</label>
             <label><input type="radio" name="medication" value="no"> Ne</label>
 
-            <button type="submit">Sljedeće</button>
+            <input type="hidden" name="recordId" th:value="${record.id}">
+
+            <button type="submit">Završi anketu</button>
         </form>
     </main>
 </body>

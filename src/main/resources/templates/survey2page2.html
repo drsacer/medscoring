@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8">
@@ -17,13 +17,15 @@
     <h1>Upitnik za procjenu rizika</h1>
 </header>
 <main>
-    <form>
+    <form action="/page2submit">
         <h2>Koja je Vaša dob?</h2>
         <label><input type="radio" name="age" value="lessthantwenty"> do 20 godina</label>
         <label><input type="radio" name="age" value="21to30"> 21-30 godina</label>
         <label><input type="radio" name="age" value="31to45"> 31-45 godina</label>
         <label><input type="radio" name="age" value="46to59"> 46-59 godina</label>
         <label><input type="radio" name="age" value="morethan60"> više od 60 godina</label>
+
+        <input type="hidden" name="recordId" th:value="${record.id}">
 
         <button type="submit">Sljedeće</button>
     </form>

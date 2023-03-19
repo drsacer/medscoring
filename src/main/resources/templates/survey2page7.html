@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8">
@@ -22,10 +22,6 @@
         <h1>Upitnik za procjenu rizika od moždanog udara</h1>
     </header>
     <main>
-        <form>
-            <h2>Koliki Vam je BMI indeks tjelesne mase?</h2>
-
-
             <center>
                 <div <h2 style="text-align: center;">BMI kalkulator</h2>
                     <form>
@@ -45,11 +41,15 @@
                 </div>
             </center>
 
+            <form action="/page7submit">
+                <h2>Koliki Vam je BMI indeks tjelesne mase?</h2>
             <label><input type="radio" name="bmi" value="underweight"> do 19.0 kg/m2 (pothranjenost)</label>
             <label><input type="radio" name="bmi" value="ideal"> 19-25 kg/m2 (normalno)</label>
             <label><input type="radio" name="bmi" value="slightlyhigh"> 25-30 kg/m2 (blago povišeno)</label>
             <label><input type="radio" name="bmi" value="overweight"> 30-35 kg/m2 (višak kilograma)</label>
             <label><input type="radio" name="bmi" value="obese"> veće od 35 kg/m2 (pretilost)</label>
+
+                <input type="hidden" name="recordId" th:value="${record.id}">
 
             <button type="submit">Sljedeće</button>
         </form>
