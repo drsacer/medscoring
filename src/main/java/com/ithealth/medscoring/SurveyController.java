@@ -404,4 +404,12 @@ public class SurveyController {
 
         return "survey2page2.html";
     }
+
+    // UTITILTY METHOD
+
+    @GetMapping("/")
+    public String redirectToLandingPage () {
+
+        return "redirect:/init";
+    }
 }
