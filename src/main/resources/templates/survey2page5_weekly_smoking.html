@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@
         <h1>Upitnik za procjenu rizika</h1>
     </header>
     <main>
-        <form>
+        <form action="/page5_weekly_smoking">
             <h2>Koliko cigareta pušite tjedno?</h2>
             <label><input type="radio" name="weeklycigarettes" value="lessthanfive"> manje od 5 cigareta</label>
             <label><input type="radio" name="weeklycigarettes" value="fivetoten"> 5-10 cigareta</label>
@@ -25,8 +25,12 @@
             <label><input type="radio" name="weeklycigarettes" value="twentytothirty"> 20-30 cigareta</label>
             <label><input type="radio" name="weeklycigarettes" value="morethanthirty"> više od 30 cigareta</label>
 
+            <input type="hidden" name="recordId" th:value="${record.id}">
+
             <button type="submit">Sljedeće</button>
         </form>
+
+        <span>Score: </span> <span th:text="${score}"> Mirko Mirić </span>
     </main>
 </body>
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <title>Upitnik za procjenu rizika</title>
@@ -20,10 +20,20 @@
 
         <center>
             <h1 style="color: black;">Dobro došli!</h1>
+
+            <h2>Za rješavanje ove ankete potrebno je odvojiti 10 minuta</h2>
+            <h3>Neka od pitanja u anketi uzimaju u obzir Vaše nalaze te Vas molimo da pripremite sljedeće: </h3>
+            <h3>Rezultat mjerenja tlaka (sistolički i dijastolički tlak te otkucaje srca), ukupan kolesterol i LDL
+                kolesterol</h3>
+            <h3> Ukoliko nemate navedene rezultate, bit će ponuđena opcija Ne znam. Odabirom te opcije, smanjuje se
+                točnost rezultata. </h3>
         </center>
 
         <center>
-            <button type="submit">Započni anketu</button>
+            <form action="/show_page1_gender">
+                <input type="hidden" name="recordId" th:value="${record.id}">
+                <button type="submit">Započni anketu</button>
+            </form>
         </center>
 
     </main>
