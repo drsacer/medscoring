@@ -17,17 +17,19 @@
         <h1>Upitnik za procjenu rizika od moždanog udara</h1>
     </header>
     <main>
-        <form action="/page8submit">
-            <h2>Koliko često pijete alkohol?</h2>
-            <label><input type="radio" name="alcohol" value="doesntdrink"> Ne pijem</label>
-            <label><input type="radio" name="alcohol" value="onedl"> 1dl dnevno</label>
-            <label><input type="radio" name="alcohol" value="twotothreedl"> 2-3dl dnevno</label>
-            <label><input type="radio" name="alcohol" value="fivedl"> 5dl dnevno</label>
-            <label><input type="radio" name="alcohol" value="morethanonel"> više od 1L dnevno</label>
+        <form action="/page13_chronic_disease">
+            <h2>Liječite li kroničnu bolest?</h2>
+            <label><input type="radio" name="chronic" value="none"> Nemam kroničnih bolesti</label>
+            <label><input type="radio" name="chronic" value="yes"> Da</label>
+            <label><input type="radio" name="chronic" value="no"> Ne</label>
+
+            <h2>Uzimate li lijekove protiv zgrušnjavanja?</h2>
+            <label><input type="radio" name="medication" value="yes"> Da</label>
+            <label><input type="radio" name="medication" value="no"> Ne</label>
 
             <input type="hidden" name="recordId" th:value="${record.id}">
 
-            <button type="submit">Sljedeće</button>
+            <button type="submit">Završi anketu</button>
         </form>
     </main>
 </body>

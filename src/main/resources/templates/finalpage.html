@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <title>Upitnik za procjenu rizika</title>
@@ -21,7 +21,15 @@
         <center>
             <h1 style="color: black;">Završili ste s ispunjavanjem upitnika!</h1>
 
-            <h2>Vaš rezultat: </h2>
+            <p> Crvena boja - visoki rizik</p>
+            <p> Narančasta boja - srednji rizik</p>
+            <p> Zelena boja - niski rizik</p>
+
+
+            <div  style="height: 8rem; width: 60rem; " th:styleAppend="|background: ${color}|">
+                <h2>Vaš rezultat: <span th:text="${score}"></span></h2>
+                <h2><span th:text="${text}"></span></h2>
+            </div>
 
         </center>
 

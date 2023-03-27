@@ -17,12 +17,17 @@
     <h1>Upitnik za procjenu rizika</h1>
 </header>
 <main>
-    <form action="/page1submit">
-        <h2>Odaberite spol</h2>
-        <label><input type="radio" name="gender" value="male"> Muško</label>
-        <label><input type="radio" name="gender" value="female"> Žensko</label>
+    <form action="/page2_age">
+        <h2>Koja je Vaša dob?</h2>
+        <label><input type="radio" name="age" value="Manje od 20 godina"> Manje do 20 godina</label>
+        <label><input type="radio" name="age" value="21-30"> 21-30 godina</label>
+        <label><input type="radio" name="age" value="31-45"> 31-45 godina</label>
+        <label><input type="radio" name="age" value="46-59"> 46-59 godina</label>
+        <label><input type="radio" name="age" value="više od 60 godina"> više od 60 godina</label>
 
         <input type="hidden" name="recordId" th:value="${record.id}">
+
+        <h2><span th:text="${obavezniUnos}"> </span> </h2>
 
         <button type="submit">Sljedeće</button>
     </form>
